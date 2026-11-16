@@ -1,11 +1,11 @@
-# Guideline gán nhãn — v0.1 (bản cá nhân) — <mã thành viên>
+# Guideline gán nhãn — v0.1 (bản cá nhân) — 054
 
 > Bản cá nhân viết ở Pha 1 sau khi xem cả 40 ảnh trong `data/images/`. Mỗi quy tắc có mã `R-xx`
 > để dẫn lại trong nhật ký QC. Mỗi ví dụ ghi ID ảnh để người đọc mở lại được.
 
-- Phiên bản: v0.1-<mã>
+- Phiên bản: v0.1-054
 - Ngày: 2026-11-16
-- Người viết: <mã> · Người duyệt: (chờ họp nhóm Pha 2)
+- Người viết: 054 · Người duyệt: (chờ họp nhóm Pha 2)
 - Dựa trên: `guideline/guideline_v0_starter.md`, `submission/taxonomy.json` (v0)
 
 ---
@@ -130,36 +130,36 @@ Cột **Loại**: `QT` = loại / quyết định theo quy tắc, không cần h
 
 | Ảnh | Tình huống | Rule ID | Quyết định | Loại | Lý do |
 |---|---|---|---|---|---|
+| img_001 | Bán tải Suzuki Carry chở ống sắt; người ngồi quán bị xe che | R-16, R-08, R-12 | xe → `truck` `truncated=yes`; mỗi người ngồi → `person` (ông lão bị xe che `occluded_level` 1–2); poster hot dog không gán | QT | |
 | img_002 | Xe đầu kéo chở 7 ô tô trên 2 tầng, công nhân đứng cuối xe | R-14, R-08 | 1 `truck` (cabin + khung + rơ-moóc); mỗi ô tô thấy được 1 `car` có `occluded_level` theo khung che; công nhân 1 `person` | QT | các xe được chở là ô tô thật, mô hình cần thấy chúng |
-| img_017 | Tượng người cưỡi ngựa đội cọc tiêu, có con mòng biển | R-12, R-17 | 0 box, giữ ảnh trong COCO | QT | tượng không phải người thật |
-| img_027 | Bia mộ hình xe bán tải bằng đá | R-12, R-17 | 0 box | QT | hình dáng giống `truck` nhưng không phải xe |
-| img_028 | Bán tải thật chở tượng ngựa, SUV đỏ phía sau | R-12, R-16 | 1 `truck` + 1 `car` (`occluded_level=1`); không gán tượng ngựa | QT | xe thật dù chở vật trang trí |
-| img_033 | Ma-nơ-canh, ảnh in người mẫu, phản chiếu xe trên kính tiệm | R-12, R-17 | 0 box | QT | không có vật thật nào chụp trực tiếp |
-| img_038 | Tủ kính trưng bày ô tô đồ chơi | R-12, R-17 | 0 box | QT | đồ chơi, không phải cỡ thật |
-| img_020 | Ô tô phía sau nhìn trong gương chiếu hậu của xe chủ | R-12, R-13, R-17 | 0 box | QT | phản chiếu + xe chủ |
-| img_018 | Người trên biển bầu cử; ô tô và bán tải sau hàng rào song sắt; chụp qua kính | R-12, R-08, R-16 | không gán người trên biển; gán các `car` và 1 `truck` (bán tải), `occluded_level=1` do hàng rào | QT | hàng rào mảnh nhìn xuyên được → tối đa mức 1 |
-| img_019 | Xe Dangermouse diễu hành có tài xế; hình chuột khổng lồ; đám đông khán giả sau rào | R-01, R-06, R-11 | 1 `car`, 1 `person` (tài xế, xe mui trần); không gán hình chuột; khán giả tiền cảnh tách được → `person`, khối phía sau → `ignore_region` | HỎI | xe độ thân vỏ vẫn chạy trên đường → coi là `car`; cần nhóm xác nhận |
-| img_024 | Bảo tàng xe: Pacer wagon đen, trên nóc chở xe Pacer vàng thu nhỏ | R-01, R-12 | xe đen và các xe trưng bày khác → `car`; xe vàng trên nóc → không gán, tick vấn đề cấp ảnh | HỎI | xe vàng nhỏ hơn cỡ thật (mô hình?) — không chắc chạy được |
-| img_011 | Tượng Predator khổng lồ; xe máy độ bằng phế liệu trưng bày; xe cứu thương | R-12, R-01 | tượng không gán; người đi lễ hội → `person`; xe cứu thương → `van`; xe máy độ → tạm gán `motorcycle` + `can_review` | HỎI | không chắc xe độ còn là phương tiện chạy được hay chỉ là tác phẩm |
+| img_003 | Người gánh quang gánh, người dắt xe đạp, xe máy đỗ | R-05, R-02 | `person` không bao thúng gánh; xe đạp không gán; xe máy đỗ → `motorcycle` | QT | |
 | img_004 | 2 tuk-tuk có tài xế ngồi trong | R-02, R-06 | không gán tuk-tuk; 2 tài xế → `person` (`occluded_level` 2–3) | QT | tuk-tuk ngoài phạm vi, nhưng xe hở → người vẫn gán |
-| img_035 | Auto rickshaw chở bao hàng cao; xe máy; ô tô trắng | R-02, R-03 | rickshaw không gán; người lái xe máy `person` + `motorcycle`; ô tô → `car` | QT | |
-| img_009 | Minibus 29 chỗ, hành khách nhìn qua cửa kính | R-02, R-06 | không gán minibus, không gán hành khách; người đi xe máy xa → gán nếu ≥ 20 px | QT | xe khách có cửa hành khách riêng → ngoài phạm vi |
+| img_007 | Kho bốc hàng: Hilux gắn thùng kín, Isuzu ELF, người đứng khuất giữa hai xe | R-16, R-08 | 2 `truck`; người → `person` `occluded_level=2` | QT | Hilux có cabin tách khỏi thùng → `truck`, không phải `van` |
 | img_008 | Bãi xe máy đêm, tài xế xe ôm áo cam, songthaew phía xa | R-03, R-11, R-16 | xe và người tiền cảnh gán riêng; cụm người xa → `ignore_region`; songthaew (bán tải có khoang khách) | HỎI | songthaew là bán tải cải tạo chở khách: `truck` hay ngoài phạm vi? |
-| img_021 | Ngã tư hàng trăm xe máy | R-03, R-10, R-11 | khoảng 15–20 cặp người + xe ở tiền cảnh gán riêng; phần xa → 1–2 `ignore_region` không phủ quá 50 % box đã gán | QT | không tách được biên từng xe ở xa |
-| img_030 | Bãi gửi xe máy dày đặc, bảo vệ áo xanh, poster người | R-11, R-12 | các xe hàng đầu → `motorcycle` (`occluded_level` 1–2); phía sau → `ignore_region`; bảo vệ → `person`; poster không gán | QT | |
-| img_032 | Hàng người chờ xe buýt (~30 người), ô tô xanh cắt mép trái | R-10, R-11, R-09 | người tách được → `person`; người đứng chồng sau không thấy biên → gộp `ignore_region`; ô tô → `car`, `truncated=yes` | HỎI | cần thống nhất ngưỡng “tách được” cho đám đông đứng sát nhau |
+| img_009 | Minibus 29 chỗ, hành khách nhìn qua cửa kính | R-02, R-06 | không gán minibus, không gán hành khách; người đi xe máy xa → gán nếu ≥ 20 px | QT | xe khách có cửa hành khách riêng → ngoài phạm vi |
+| img_011 | Tượng Predator khổng lồ; xe máy độ bằng phế liệu trưng bày; xe cứu thương | R-12, R-01 | tượng không gán; người đi lễ hội → `person`; xe cứu thương → `van`; xe máy độ → tạm gán `motorcycle` + `can_review` | HỎI | không chắc xe độ còn là phương tiện chạy được hay chỉ là tác phẩm |
+| img_012 | Chụp từ sau thùng bán tải chở hàng | R-13, R-09 | bán tải → `truck` `truncated=yes` (không phải xe chủ: người chụp đứng ngoài xe); Mazda → `car`; xe tải phía trước → `truck` | HỎI | phân biệt “xe chủ” với “xe ngay trước camera” |
+| img_013 | Đêm, tượng rồng vàng, 2 người đi bộ, xe máy đỗ, ô tô xa | R-12, R-10 | tượng không gán; 2 `person`; xe máy đỗ `motorcycle`; ô tô xa gán nếu ≥ 20 px | QT | |
 | img_014 | Hai người qua đường rõ nét, xe máy mờ chuyển động hai bên | R-15 | 2 `person` rõ; vệt mờ bán trong suốt bên trái/phải → `ignore_region` | HỎI | khó xác định biên vật mờ |
 | img_015 | Xe ô tô mờ chuyển động phía sau, 2 xe tiền cảnh cắt mép | R-15, R-09 | xe đỏ và SUV bạc → `car`, `truncated=yes`; xe đỗ rõ phía sau → `car`; vệt xe mờ → `ignore_region` | QT | |
-| img_003 | Người gánh quang gánh, người dắt xe đạp, xe máy đỗ | R-05, R-02 | `person` không bao thúng gánh; xe đạp không gán; xe máy đỗ → `motorcycle` | QT | |
-| img_007 | Kho bốc hàng: Hilux gắn thùng kín, Isuzu ELF, người đứng khuất giữa hai xe | R-16, R-08 | 2 `truck`; người → `person` `occluded_level=2` | QT | Hilux có cabin tách khỏi thùng → `truck`, không phải `van` |
-| img_037 | Bán tải gắn nắp thùng cao kín; 2 xe buýt; người đi bộ | R-16, R-02 | bán tải → `truck`; buýt không gán; người → `person` | QT | nắp thùng không biến xe thành `van` vì cabin vẫn tách riêng |
 | img_016 | Tuk-tuk, Vespa chở hàng, Hiace, bán tải sau tuk-tuk, người cắt mép | R-02, R-04, R-16, R-09 | Vespa → `motorcycle` (không bao cuộn hàng thò ra) + `person`; Hiace → `van`; bán tải → `truck` (`occluded_level` 2); người áo đỏ → `person` `truncated=yes`; tài xế/khách tuk-tuk → `person` | QT | |
+| img_017 | Tượng người cưỡi ngựa đội cọc tiêu, có con mòng biển | R-12, R-17 | 0 box, giữ ảnh trong COCO | QT | tượng không phải người thật |
+| img_018 | Người trên biển bầu cử; ô tô và bán tải sau hàng rào song sắt; chụp qua kính | R-12, R-08, R-16 | không gán người trên biển; gán các `car` và 1 `truck` (bán tải), `occluded_level=1` do hàng rào | QT | hàng rào mảnh nhìn xuyên được → tối đa mức 1 |
+| img_019 | Xe Dangermouse diễu hành có tài xế; hình chuột khổng lồ; đám đông khán giả sau rào | R-01, R-06, R-11 | 1 `car`, 1 `person` (tài xế, xe mui trần); không gán hình chuột; khán giả tiền cảnh tách được → `person`, khối phía sau → `ignore_region` | HỎI | xe độ thân vỏ vẫn chạy trên đường → coi là `car`; cần nhóm xác nhận |
+| img_020 | Ô tô phía sau nhìn trong gương chiếu hậu của xe chủ | R-12, R-13, R-17 | 0 box | QT | phản chiếu + xe chủ |
+| img_021 | Ngã tư hàng trăm xe máy | R-03, R-10, R-11 | khoảng 15–20 cặp người + xe ở tiền cảnh gán riêng; phần xa → 1–2 `ignore_region` không phủ quá 50 % box đã gán | QT | không tách được biên từng xe ở xa |
 | img_022 | Ảnh đen trắng, mô tô có thuyền | R-18 | 1 `motorcycle` bao cả thuyền + `person` nếu ≥ 20 px | QT | thuyền gắn cố định là một phần của xe |
-| img_040 | Người đội mũ bảo hiểm cận cảnh; chỉ thấy gương xe máy; taxi, tuk-tuk, SUV, buýt | R-03, R-06, R-02 | người → `person` `truncated=yes`; **không** vẽ `motorcycle` (chỉ thấy gương); taxi và SUV → `car`; tài xế trong taxi không gán | HỎI | xe máy hầu như không thấy — cần nhóm chốt có gán hay không |
-| img_013 | Đêm, tượng rồng vàng, 2 người đi bộ, xe máy đỗ, ô tô xa | R-12, R-10 | tượng không gán; 2 `person`; xe máy đỗ `motorcycle`; ô tô xa gán nếu ≥ 20 px | QT | |
+| img_024 | Bảo tàng xe: Pacer wagon đen, trên nóc chở xe Pacer vàng thu nhỏ | R-01, R-12 | xe đen và các xe trưng bày khác → `car`; xe vàng trên nóc → không gán, tick vấn đề cấp ảnh | HỎI | xe vàng nhỏ hơn cỡ thật (mô hình?) — không chắc chạy được |
+| img_027 | Bia mộ hình xe bán tải bằng đá | R-12, R-17 | 0 box | QT | hình dáng giống `truck` nhưng không phải xe |
+| img_028 | Bán tải thật chở tượng ngựa, SUV đỏ phía sau | R-12, R-16 | 1 `truck` + 1 `car` (`occluded_level=1`); không gán tượng ngựa | QT | xe thật dù chở vật trang trí |
+| img_030 | Bãi gửi xe máy dày đặc, bảo vệ áo xanh, poster người | R-11, R-12 | các xe hàng đầu → `motorcycle` (`occluded_level` 1–2); phía sau → `ignore_region`; bảo vệ → `person`; poster không gán | QT | |
 | img_031 | Đêm mưa, bức vẽ hoạt hình trên tòa nhà, ô tô, xe buýt, xe máy | R-12, R-02, R-10 | tranh không gán; buýt không gán; các ô tô → `car`; người đi xe máy và người đi bộ → gán nếu ≥ 20 px | QT | |
-| img_001 | Bán tải Suzuki Carry chở ống sắt; người ngồi quán bị xe che | R-16, R-08, R-12 | xe → `truck` `truncated=yes`; mỗi người ngồi → `person` (ông lão bị xe che `occluded_level` 1–2); poster hot dog không gán | QT | |
-| img_012 | Chụp từ sau thùng bán tải chở hàng | R-13, R-09 | bán tải → `truck` `truncated=yes` (không phải xe chủ: người chụp đứng ngoài xe); Mazda → `car`; xe tải phía trước → `truck` | HỎI | phân biệt “xe chủ” với “xe ngay trước camera” |
+| img_032 | Hàng người chờ xe buýt (~30 người), ô tô xanh cắt mép trái | R-10, R-11, R-09 | người tách được → `person`; người đứng chồng sau không thấy biên → gộp `ignore_region`; ô tô → `car`, `truncated=yes` | HỎI | cần thống nhất ngưỡng “tách được” cho đám đông đứng sát nhau |
+| img_033 | Ma-nơ-canh, ảnh in người mẫu, phản chiếu xe trên kính tiệm | R-12, R-17 | 0 box | QT | không có vật thật nào chụp trực tiếp |
+| img_035 | Auto rickshaw chở bao hàng cao; xe máy; ô tô trắng | R-02, R-03 | rickshaw không gán; người lái xe máy `person` + `motorcycle`; ô tô → `car` | QT | |
+| img_037 | Bán tải gắn nắp thùng cao kín; 2 xe buýt; người đi bộ | R-16, R-02 | bán tải → `truck`; buýt không gán; người → `person` | QT | nắp thùng không biến xe thành `van` vì cabin vẫn tách riêng |
+| img_038 | Tủ kính trưng bày ô tô đồ chơi | R-12, R-17 | 0 box | QT | đồ chơi, không phải cỡ thật |
+| img_040 | Người đội mũ bảo hiểm cận cảnh; chỉ thấy gương xe máy; taxi, tuk-tuk, SUV, buýt | R-03, R-06, R-02 | người → `person` `truncated=yes`; **không** vẽ `motorcycle` (chỉ thấy gương); taxi và SUV → `car`; tài xế trong taxi không gán | HỎI | xe máy hầu như không thấy — cần nhóm chốt có gán hay không |
 
 ---
 
@@ -194,7 +194,7 @@ Cột **Loại**: `QT` = loại / quyết định theo quy tắc, không cần h
 | Phiên bản | Thay đổi | Lý do (ca nào) |
 |---|---|---|
 | v0 | Bản khởi đầu của giảng viên | — |
-| v0.1-<mã> | Định nghĩa lớp có ví dụ/phản ví dụ; ngưỡng % cho `occluded_level`; định nghĩa `truncated`; 18 quy tắc R-01…R-18; bảng ca khó 30 ảnh | v0 mơ hồ ở: người đi xe máy (img_026, img_010), vật không thật (img_017, img_027, img_033, img_038), xe chở xe (img_002), đám đông (img_021, img_030), xe ngoài taxonomy (img_004, img_009) |
+| v0.1-054 | Định nghĩa lớp có ví dụ/phản ví dụ; ngưỡng % cho `occluded_level`; định nghĩa `truncated`; 18 quy tắc R-01…R-18; bảng ca khó 30 ảnh | v0 mơ hồ ở: người đi xe máy (img_026, img_010), vật không thật (img_017, img_027, img_033, img_038), xe chở xe (img_002), đám đông (img_021, img_030), xe ngoài taxonomy (img_004, img_009) |
 
 ---
 
