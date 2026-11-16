@@ -1,11 +1,11 @@
-# Guideline gán nhãn — v0.1 (bản cá nhân) — <mã thành viên>
+# Guideline gán nhãn — v0.1 (bản cá nhân) — 054
 
 > Bản cá nhân viết ở Pha 1 sau khi xem cả 40 ảnh trong `data/images/`. Mỗi quy tắc có mã `R-xx`
 > để dẫn lại trong nhật ký QC. Mỗi ví dụ ghi ID ảnh để người đọc mở lại được.
 
-- Phiên bản: v0.1-<mã>
+- Phiên bản: v0.1-054
 - Ngày: 2026-11-16
-- Người viết: <mã> · Người duyệt: (chờ họp nhóm Pha 2)
+- Người viết: 054 · Người duyệt: (chờ họp nhóm Pha 2)
 - Dựa trên: `guideline/guideline_v0_starter.md`, `submission/taxonomy.json` (v0)
 
 ---
@@ -194,7 +194,7 @@ Cột **Loại**: `QT` = loại / quyết định theo quy tắc, không cần h
 | Phiên bản | Thay đổi | Lý do (ca nào) |
 |---|---|---|
 | v0 | Bản khởi đầu của giảng viên | — |
-| v0.1-<mã> | Định nghĩa lớp có ví dụ/phản ví dụ; ngưỡng % cho `occluded_level`; định nghĩa `truncated`; 18 quy tắc R-01…R-18; bảng ca khó 30 ảnh | v0 mơ hồ ở: người đi xe máy (img_026, img_010), vật không thật (img_017, img_027, img_033, img_038), xe chở xe (img_002), đám đông (img_021, img_030), xe ngoài taxonomy (img_004, img_009) |
+| v0.1-054 | Định nghĩa lớp có ví dụ/phản ví dụ; ngưỡng % cho `occluded_level`; định nghĩa `truncated`; 18 quy tắc R-01…R-18; bảng ca khó 30 ảnh | v0 mơ hồ ở: người đi xe máy (img_026, img_010), vật không thật (img_017, img_027, img_033, img_038), xe chở xe (img_002), đám đông (img_021, img_030), xe ngoài taxonomy (img_004, img_009) |
 
 ---
 
