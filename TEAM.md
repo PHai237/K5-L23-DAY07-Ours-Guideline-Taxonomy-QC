@@ -1,7 +1,12 @@
 # Thông tin nhóm
 
-- Tên nhóm:
+- Tên nhóm: Ours
 - Mã thành viên (ba chữ số):
+    - Phạm Hải - 047
+    - Lê Trần Phi Hùng - 353
+    - Vũ Duy Thế - 054
+    - Nguyễn Nhật Hạ - 325
+    - Phạm Văn Dương - 332
 - Người điều phối:
 - Người review bản cuối:
 - Commit chốt bài (điền ở kênh nộp sau khi commit):
