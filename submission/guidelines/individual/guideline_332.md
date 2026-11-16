@@ -1,6 +1,7 @@
 # Guideline gán nhãn Bounding Box – v0.1 (Individual)
 
-- **Phiên bản:** v0.1 – Individual Draft
+- **Phiên bản:** v0.1
+- **Người viết:** 332
 - **Loại nhãn:** Bounding Box
 - **Công cụ:** CVAT
 - **Định dạng xuất:** COCO 1.0
@@ -71,9 +72,9 @@ Xây dựng bộ dữ liệu gán nhãn phục vụ huấn luyện mô hình ph�
 | Người đứng cạnh hoặc dắt xe | `person` |
 | Hành khách trong ô tô, xe bus | Không gán nhãn |
 | Tượng hoặc ma-nơ-canh giống người | Không gán `person`. |
-| Xe chở xe khác | Gán riêng từng phương tiện nếu đủ điều kiện. |
-| Tuk-tuk hoặc phương tiện chưa có class phù hợp | Đánh dấu `can_review`, đề xuất nhóm thống nhất cách xử lý. |
-| Đối tượng quá nhỏ hoặc không nhận diện được | Áp dụng quy tắc `ignore_region` và ngưỡng kích thước trong RULES.md. |
+| Xe chở xe khác | Chỉ gán xe chở, không gán các xe được chở. |
+| Phương tiện chưa có class phù hợp | Đánh dấu `can_review`, đề xuất nhóm thống nhất cách xử lý. |
+| Đối tượng quá nhỏ hoặc không nhận diện được | không gán nhãn |
 
 ## 5. Kiểm tra chất lượng (QC)
 
