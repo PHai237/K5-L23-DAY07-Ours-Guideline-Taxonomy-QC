@@ -241,6 +241,6 @@ Cột **Loại**: `QT` = quyết định theo quy tắc, không cần hỏi; `H�
 ## 6. Ghi nhận calibration v1.1
 
 - Không thay đổi lớp, thuộc tính, ngưỡng hoặc ý nghĩa quy tắc so với v1.0 (`kind=editorial`).
-- IAA trước calibration: 851 cặp box ghép, IoU trung bình 0.897, đồng thuận lớp 90.1%; kết quả chưa đạt ngưỡng lớp 95%.
-- Có 1.447 ca IAA trên 38/40 ảnh đã được nhóm chốt, cộng ca chung M001 tại `img_009.jpg` theo R-02.
+- IAA trước calibration: 853 cặp box ghép, IoU trung bình 0.896, đồng thuận lớp 90.2%; kết quả chưa đạt ngưỡng lớp 95%.
+- Có 1.426 ca IAA trên 38/40 ảnh đã được nhóm chốt, cộng ca chung M001 tại `img_009.jpg` theo R-02.
 - Reviewer 054 đã duyệt 40/40 ảnh ở vòng 4; không còn cờ `can_review`, quyết định bàn giao là **Release**.
