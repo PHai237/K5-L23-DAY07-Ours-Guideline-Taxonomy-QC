@@ -9,7 +9,7 @@
   - Phạm Văn Dương - 332
 - Người điều phối: 047
 - Người review bản cuối: Vũ Duy Thế - 054 (đã duyệt vòng 8)
-- Commit chốt bài (cập nhật sau khi đồng bộ đầu vào mới): Chưa chốt
+- Commit chốt bài: `a1a1f4a`
 
 ## Kết quả tóm tắt
 
